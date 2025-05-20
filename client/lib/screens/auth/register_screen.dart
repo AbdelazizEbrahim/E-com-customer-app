@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../../providers/auth_provider.dart';
 import '../../services/auth_service.dart';
 import '../../utils/constants.dart';
+
 import 'login_screen.dart';
 import '../home_screen.dart';
 
@@ -78,9 +79,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
               Text(
                 'Create Your Account',
                 style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                  color: Colors.blueAccent,
-                  fontWeight: FontWeight.bold,
-                ),
+                      color: Colors.blueAccent,
+                      fontWeight: FontWeight.bold,
+                    ),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 20),
@@ -162,36 +163,36 @@ class _RegisterScreenState extends State<RegisterScreen> {
               _isLoading
                   ? const Center(child: CircularProgressIndicator())
                   : InkWell(
-                    onTap: _register,
-                    borderRadius: BorderRadius.circular(12),
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(vertical: 16),
-                      decoration: BoxDecoration(
-                        gradient: const LinearGradient(
-                          colors: [Colors.blueAccent, Colors.lightBlue],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),                        
-                        borderRadius: BorderRadius.circular(12),
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Colors.black26,
-                            blurRadius: 4,
-                            offset: Offset(0, 2),
+                      onTap: _register,
+                      borderRadius: BorderRadius.circular(12),
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(vertical: 16),
+                        decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            colors: [Colors.blueAccent, Colors.lightBlue],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
                           ),
-                        ],
-                      ),
-                      child: const Text(
-                        'Register',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
+                          borderRadius: BorderRadius.circular(12),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.black26,
+                              blurRadius: 4,
+                              offset: Offset(0, 2),
+                            ),
+                          ],
                         ),
-                        textAlign: TextAlign.center,
+                        child: const Text(
+                          'Register',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                     ),
-                  ),
               const SizedBox(height: 16),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
